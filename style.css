@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+
+    
+}
+.container{
+    
+              height: 400px;
+               width: 400px;
+          margin-top: 50px;
+    background-color: green;
+             display: flex;
+      flex-direction: column;
+         align-items: center;
+   
+
+}
+.menu{
+    width: 400px;
+    height: 50px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-self: start;
+   border-bottom: 5px solid rgb(0, 91, 0);
+}
+#start,#restart{
+    height: 40px;
+    width: 80px;
+    background-color: slateblue;
+    border-radius: 20px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 5px;
+}
+#restart{
+    display: none;
+}
+input{
+     height: 30px;
+     width: 100px;
+     text-align: end;
+     background-color: transparent;
+     border:none;
+     font-size: 25px;
+     padding-right: 5px;
+     font-weight: bolder;
+     
+}
+
+.map
+{
+    height: 300px;
+    width: 300px;
+    border:3px solid black;
+    
+  display: grid;
+  grid-template-rows: repeat(9,30px);
+  grid-template-columns: repeat(9,30px);
+  gap: 0;
+
+    background-color: rgb(4, 199, 4);
+}
+.snake{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(74, 0, 149);
+    position: relative;
+    border-radius: 5PX;
+    top:0;
+    left: 0;
+    z-index: 2;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border:0.5px solid black;
+}
+.food{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    position:relative;
+    top:0;
+    left: 0;
+    z-index: 1;
+    grid-row: 10/10;
+    grid-column: 10/10;
+    border-radius: 50%;
+    animation: glow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode:both;
+    animation-iteration-count: infinite;
+   
+  box-shadow: 0px 0px 10px greenyellow;
+}
+@keyframes glow {
+    0%{
+        box-shadow:  0 0 0 red;
+        display: block;
+    }
+    50%{
+        box-shadow:  0 0 15px red ;
+        display: block;
+    }
+    100%{
+        box-shadow: 0 0 0 red ;
+        display: none;
+    }
+
+    
+}
+
